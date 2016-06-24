@@ -16,7 +16,7 @@
             stream_wrapper_unregister('http');
             stream_wrapper_register('http', 'NTLMStream') or die("Failed to register protocol");
             
-            $baseURL = 'http://172.16.54.17:7047/WS_SuperShift_LIVE/ws/Tristar-Europe B.V./Codeunit/SuperShift_WS';
+            $baseURL = 'http://ip_address:port/server_name/ws/company_name/Codeunit/codeunit_name';
             $client = new NTLMSoapClient($baseURL);
             $result = $client->GetCustomers(array(
                 'customersOutput' => 'Customer'
