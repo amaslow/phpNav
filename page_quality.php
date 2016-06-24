@@ -15,7 +15,7 @@
             stream_wrapper_unregister('http');
             stream_wrapper_register('http', 'NTLMStream') or die("Failed to register protocol");
 
-            $baseURL = 'http://172.16.54.17:7047/WS_SuperShift_LIVE/ws/Tristar-Europe B.V./Page/Items_QC?wsdl';
+            $baseURL = 'http://"ip_address":"port"/"server"/ws/"company"/Page/"page_name"?wsdl';
 
             $client = new NTLMSoapClient($baseURL);
             ?>    
