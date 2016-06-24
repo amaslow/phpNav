@@ -1,5 +1,5 @@
 <?php
 
-define('USERPWD', 'Domain\user:password');
+define('USERPWD', '"domain_name"\"user":"password"');
 
 ?>
