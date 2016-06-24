@@ -16,7 +16,7 @@
             stream_wrapper_unregister('http');
             stream_wrapper_register('http', 'NTLMStream') or die("Failed to register protocol");
             
-            $baseURL = 'http://ip_address:port/server_name/ws/company_name/Codeunit/codeunit_name';
+            $baseURL = 'http://"ip_address":"port"/"server_name"/ws/"company_name"/Codeunit/"codeunit_name"';
             $client = new NTLMSoapClient($baseURL);
             $result = $client->GetCustomers(array(
                 'customersOutput' => 'Customer'
